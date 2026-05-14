@@ -1,0 +1,26 @@
+{
+  "name": "desafio_cypress",
+  "version": "1.0.0",
+  "description": "Desafio treinamento cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AucelioBarbosa/Desafio_Cypress.git"
+  },
+  "keywords": [],
+  "author": "aucelio.barbosa",
+  "license": "ISC",
+  "type": "commonjs",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/support/step-definitions/"
+  },
+  "homepage": "https://github.com/AucelioBarbosa/Desafio_Cypress#readme",
+  "devDependencies": {
+    "cypress": "^15.15.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}
