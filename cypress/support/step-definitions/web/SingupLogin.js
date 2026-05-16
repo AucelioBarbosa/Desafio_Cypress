@@ -1,8 +1,8 @@
 import { Given, When, And, Then, Before, After } from 'cypress-cucumber-preprocessor/steps';
 import SingupLogin from '../../pages/SingupLogin.page'
 
-When('realizo um novo cadastro de usuário', () => {
+And('preencho os campos para cadastro', () => {
+   SingupLogin.preencherCamposParaPrecadastro()
+})
 
-   SingupLogin.preencherCamposParaCadastro()
 
-});

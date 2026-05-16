@@ -2,17 +2,12 @@
 #language: pt
 
 Funcionalidade: Cadastrar usuario e validar que produto foi adicionado no carrinho
-Cenario: Cadastrar usuário
+Cenario: Cadastrar usuário a dicionar produto ao carrinho
 Dado que acesso o site Automation Exercise
 E clico para Signup Login
-Quando realizo um novo cadastro de usuário
-# Então devo visualizar o usuário logado com sucesso
-
-# Cenario: Validar produto no carrinho
-#     Dado que estou na tele inicial
-#     E seleciono View Product ao localizar o produto "Men Tshirt"
-#     E devo visualizar os detalhes de nome e preço do produto
-#     E adiciono o produto ao carrinho
-#     E devo visualizar a mensagem de sucesso ao adicionar produto
-#     Quando clico em meu carrinho
-#     Então devo validar os dados de nome e valor do produto no carrinho
+E preencho os campos para cadastro
+E realizo um novo cadastro de usuário na pagian dados do usuario
+E visualizo o modal usuário criado com sucesso
+# Quando retornar a tele inicial guardando o valor e o nome do produto 
+# E adicionando Men Tshirt ao carrinho
+# Então valido o nome e valor do produto no carrinho.

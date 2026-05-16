@@ -10,7 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/AucelioBarbosa/Desafio_Cypress.git"
   },
-  "keywords": ["C@10dav13009"],
+  "keywords": [
+    "C@10dav13009"
+  ],
   "author": "aucelio.barbosa",
   "license": "ISC",
   "type": "commonjs",
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/AucelioBarbosa/Desafio_Cypress#readme",
   "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
     "cypress": "^15.15.0",
     "cypress-cucumber-preprocessor": "^4.3.1"
   }

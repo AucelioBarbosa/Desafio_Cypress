@@ -14,7 +14,7 @@ export const elementoInformacaoConta = {
     CAMPO_CODIGO_POSTAL: '[data-qa="zipcode"]',
     CAMPO_NUMERO_CELULAR: '[data-qa="mobile_number"]',
     BOTAO_CRIAR_CONTA: '[data-qa="create-account"]',
-    //Como estou validado a só a criação da conta não criei outras class para validar.
+    //Como estou validado só a criação da conta não criei outras class para validar.
     MENSAGEM_CONTA_CRIADA: 'b:contains("Account Created!")',
     BOTAO_CONTINUAR: '[data-qa="continue-button"]'
 }
