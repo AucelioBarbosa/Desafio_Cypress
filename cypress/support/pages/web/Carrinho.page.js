@@ -1,11 +1,4 @@
-export const Carrinho = {
-  NOME_ITEM_TABLE: '.table tbody tr:eq(0) td:eq(1) > h4',
-  VALOR_ITEM_TABLE: '.table tbody tr:eq(0) td:eq(2) > p',
-
-  VALOR_ITEM: ':nth-child(4) > .product-image-wrapper h2:eq(0)',
-  NOME_ITEM: ':nth-child(4) > .product-image-wrapper p:eq(0)',
-  BOTAO_ADD_CARRINHO: ':nth-child(4) > .product-image-wrapper a:eq(0)',
-}
+import {elementosCarrinho} from '../../elements/elementosCarrinho'
 
 // Variáveis globais
 const dados = {
@@ -17,7 +10,7 @@ class CarrinhoPage {
 
   capturarDadosProduto() {
 
-    cy.get(Carrinho.NOME_ITEM, { timeout: 10000 })
+    cy.get(elementosCarrinho.NOME_ITEM,{ timeout: 10000 })
       .invoke('text')
       .then((texto) => {
 
@@ -26,7 +19,7 @@ class CarrinhoPage {
         cy.log(`Nome capturado: ${dados.nome}`)
       })
 
-    cy.get(Carrinho.VALOR_ITEM, { timeout: 10000 })
+    cy.get(elementosCarrinho.VALOR_ITEM, { timeout: 10000 })
       .invoke('text')
       .then((texto) => {
 
@@ -37,19 +30,19 @@ class CarrinhoPage {
   }
 
   clicarBotaoAddCarrinho() {
-    cy.get(Carrinho.BOTAO_ADD_CARRINHO).click()
+    cy.get(elementosCarrinho.BOTAO_ADD_CARRINHO).click()
   }
 
   validarProdutoAdicionadoAoCarrinho() {
 
-    cy.get(Carrinho.NOME_ITEM_TABLE)
+    cy.get(elementosCarrinho.NOME_ITEM_TABLE)
       .invoke('text')
       .then((nomeCarrinho) => {
 
         expect(nomeCarrinho.trim()).to.equal(dados.nome)
       })
 
-    cy.get(Carrinho.VALOR_ITEM_TABLE)
+    cy.get(elementosCarrinho.VALOR_ITEM_TABLE)
       .invoke('text')
       .then((valorCarrinho) => {
 

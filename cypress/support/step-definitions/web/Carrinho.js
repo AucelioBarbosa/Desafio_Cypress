@@ -1,6 +1,6 @@
 import { Given, When, And, Then, Before, After } from 'cypress-cucumber-preprocessor/steps'
-import CarrinhoPage from '../../pages/Carrinho.page'
-import Home from '../../pages/home.page'
+import CarrinhoPage from '../../pages/web/Carrinho.page'
+import Home from '../../pages/web/home.page'
 
 
 And('adicionando Men Tshirt ao carrinho',()  =>{

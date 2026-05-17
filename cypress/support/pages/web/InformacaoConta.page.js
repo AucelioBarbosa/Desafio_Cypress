@@ -1,8 +1,6 @@
-import { elementoInformacaoConta as inforUser } from "../elements/elementoInformacaoConta"
-// import { UserDataFaker as userData } from "../Util/UserDataFaker"
+import { elementoInformacaoConta as inforUser } from "../../elements/elementoInformacaoConta"
 
 const tipoSexo = 'male'
-
 class InformacaoConta {
 
     preencherformularionNovoUser() {

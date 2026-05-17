@@ -1,4 +1,4 @@
-import {elementoMenuHome as el}  from '../elements/elementsHome.js'
+import {elementoMenuHome as el}  from '../../elements/elementsHome.js'
 
 class Home {
     acessarLoginCadastro() {

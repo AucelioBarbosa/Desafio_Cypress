@@ -1,6 +1,6 @@
 import { Given, When, And, Then, Before, After } from 'cypress-cucumber-preprocessor/steps'
-import Home from '../../pages/home.page'
-import CarrinhoPage from '../../pages/Carrinho.page';
+import Home from '../../pages/web/home.page'
+import CarrinhoPage from '../../pages/web/Carrinho.page';
 
 Given('que acesso o site Automation Exercise', () => {
     cy.visit('/')
