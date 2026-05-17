@@ -1,4 +1,4 @@
-import elementoHome,{elementoHome, produtoSelecionado}  from '../elements/elementsHome.js'
+import {elementoMenuHome as el}  from '../elements/elementsHome.js'
 
 class Home {
     acessarLoginCadastro() {
@@ -6,18 +6,9 @@ class Home {
         .click()
     }
 
-    guardarValorENomeDoProduto() {
-        cy.get(produtoSelecionado.NOME_ITEM).invoke('text').as('nomeProduto')
-        cy.get([produtoSelecionado.VALOR_ITEM]).invoke('text').as('valorProduto')
-    }
-
-    clicarBotaoAddCarrinho() {
-        cy.get(produtoSelecionado.BOTAO_ADD_CARRINHO).click()
-    }
-
-    validarModalProdutoAdicionadoAcessarCarrinho(){
-        cy.get(produtoSelecionado.MODAL_TITLE).should('contain', 'Added!')
-        cy.get(produtoSelecionado.BOTAO_ACC_CART_MODAL).click()
+    validarModalProdutoAdicionadoAcessarCarrinho() {
+        cy.get(el.MODAL_TITLE).should('contain', 'Added!')
+        cy.get(el.BOTAO_ADD_CART_MODAL).click()
     }
 }
 export default new Home()

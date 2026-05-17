@@ -7,6 +7,10 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     viewportHeight: 1080,
     watchForFileChanges: false,
+    video: true,
+    videosFolder: 'cypress/evidencias/videos', // pasta onde os vídeos serão salvos
+    screenshotOnRunFailure: true, // opcional: captura screenshot se falhar
+    screenshotsFolder: 'cypress/evidencias/screenshots', // pasta onde as screenshots serão salvas
     specPattern: "cypress/e2e/**/*.feature",
     baseUrl: "https://www.automationexercise.com",
     downloadsFolder: "cypress/dowloads",
