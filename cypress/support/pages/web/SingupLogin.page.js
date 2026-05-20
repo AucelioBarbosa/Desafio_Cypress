@@ -1,10 +1,11 @@
 import { elementoLogin as el } from '../../elements/elementoLogin';
+import  Data  from '../../Util/Data';
 
 class SingupLogin {
 
     preencherCamposParaPrecadastro() {
-        this.incerirNome('Valentim')
-        this.incerirEmail('valentim@example.com')
+        this.incerirNome(Data.nameUser())
+        this.incerirEmail(Data.emailUser())
         this.clicarBotaoSingup()
     }
 
@@ -13,7 +14,9 @@ class SingupLogin {
     }
 
     incerirEmail(email) {
-        cy.get(el.ENDERECO_EMAIL).type(email)
+        
+    cy.get(el.ENDERECO_EMAIL).type(email)
+        
     }
 
     clicarBotaoSingup() {

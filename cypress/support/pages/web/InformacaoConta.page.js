@@ -1,25 +1,24 @@
-import { elementoInformacaoConta as inforUser } from "../../elements/elementoInformacaoConta"
-
-const tipoSexo = 'male'
+import { elementoInformacaoConta as inforUser } from "../../elements/elementoInformacaoConta";
+import  Data  from '../../Util/Data';
 class InformacaoConta {
 
     preencherformularionNovoUser() {
-        this.radioTipoSexo(tipoSexo)
-        this.preencherCampoPassword(123456)
-        this.preencherDataNascimento('10', 'May', '1990')
-        this.preencherPrimeioNome('Valentim')
-        this.preencherSegundoNome('Santos')
-        this.preencherCampoAddress('Rua dos Bobos, 0')
-        this.selecionarCampoCountry('United States')
-        this.preencherCampoState('California')
-        this.preencherCampoCity('Los Angeles')
-        this.preencherCampoZipcode('90001')
-        this.preencherCampoMobile('1234567890')
+        this.radioTipoSexo(Data.titleUser())
+        this.preencherCampoPassword(Data.passwordUser())
+        this.preencherDataNascimento(Data.birhdayUser(), Data.birthmonthUser(), Data.birthyearUser())
+        this.preencherPrimeioNome(Data.lastNameUser())
+        this.preencherSegundoNome(Data.lastNameUser())
+        this.preencherCampoAddress(Data.addressUser())
+        this.selecionarCampoCountry(Data.countryUser())
+        this.preencherCampoState(Data.stateUser())
+        this.preencherCampoCity(Data.cityUser())
+        this.preencherCampoZipcode(Data.zipCodUser())
+        this.preencherCampoMobile(Data.mobileUser())
         this.clicarBotaoCreateAccount()
     }
 
     radioTipoSexo(sextype) {
-        if (sextype === 'male') {
+        if (sextype === 'Mr') {
             cy.get(inforUser.RAIDO_MR).click()
         } else {
             cy.get(inforUser.RADIO_MRS).click()
@@ -27,8 +26,7 @@ class InformacaoConta {
     }
 
     preencherCampoPassword(password) {
-        cy.get(inforUser.CAMPO_SENHA)
-            .type(password)
+        cy.get(inforUser.CAMPO_SENHA).type(password)
     }
 
 

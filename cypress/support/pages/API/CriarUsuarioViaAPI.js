@@ -1,3 +1,4 @@
+import Data from '../../Util/Data'
 class CriarUsuarioViaAPI {
 
     criarUsuario() {
@@ -6,23 +7,22 @@ class CriarUsuarioViaAPI {
             url: 'https://automationexercise.com/api/createAccount',
             form: true,
             body: {
-                name: "João Silva",
-                email: "joao.silva@email.com",
-                password: "123456",
-                title: "Mr",
-                birth_date: "15",
-                birth_month: "08",
-                birth_year: "1995",
-                firstname: "João",
-                lastname: "Silva",
-                company: "Empresa XYZ",
-                address1: "Rua das Flores, 123",
-                address2: "Apto 45",
-                country: "Brazil",
-                zipcode: "72870-000",
-                state: "GO",
-                city: "Macacos",
-                mobile_number: "61999999999"
+                name: Data.nameUser(),
+                email: Data.emailUser(),
+                password: Data.passwordUser(),
+                title: Data.titleUser(),
+                birth_date: Data.birhdayUser(),
+                birth_month: Data.birthmonthUser(),
+                birth_year: Data.birthyearUser(),
+                firstname: Data.nameUser(),
+                lastname: Data.lastNameUser(),
+                address1: Data.addressUser(),
+                address2: Data.address2User(),
+                country: Data.countryUser(),
+                zipcode: Data.zipCodUser(),
+                state: Data.stateUser(),
+                city: Data.cityUser(),
+                mobile_number: Data.mobileUser()
             },
             failOnStatusCode: false
         }).as('responseCriacaoUsuario')
